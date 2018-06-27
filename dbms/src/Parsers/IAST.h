@@ -47,7 +47,7 @@ public:
 
     /** Get the canonical name of the column if the element is a column */
     String getColumnName() const;
-    virtual void appendColumnName(WriteBuffer & ostr) const
+    virtual void appendColumnName(WriteBuffer &) const
     {
         throw Exception("Trying to get name of not a column: " + getID(), ErrorCodes::NOT_A_COLUMN);
     }
