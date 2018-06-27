@@ -1984,7 +1984,7 @@ void ExpressionAnalyzer::getActionsImpl(const ASTPtr & ast, bool no_subqueries, 
                                         ProjectionManipulatorPtr projection_manipulator)
 {
     String ast_column_name;
-    auto getColumnName = [&ast_column_name]()
+    auto getColumnName = [&ast, &ast_column_name]()
     {
         if (ast_column_name.empty())
             ast_column_name = ast->getColumnName();
