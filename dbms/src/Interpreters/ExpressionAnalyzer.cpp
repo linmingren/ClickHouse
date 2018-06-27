@@ -1997,7 +1997,7 @@ void ExpressionAnalyzer::getActionsImpl(const ASTPtr & ast, bool no_subqueries, 
         && projection_manipulator->tryToGetFromUpperProjection(getColumnName()))
         return;
 
-    if (ASTIdentifier * node = typeid_cast<ASTIdentifier *>(ast.get()))
+    if (typeid_cast<ASTIdentifier *>(ast.get()))
     {
         if (!only_consts && !projection_manipulator->tryToGetFromUpperProjection(getColumnName()))
         {
