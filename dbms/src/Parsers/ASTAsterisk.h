@@ -14,10 +14,7 @@ public:
     void appendColumnName(WriteBuffer & ostr) const override;
 
 protected:
-    void formatImpl(const FormatSettings & settings, FormatState &, FormatStateStacked) const override
-    {
-        settings.ostr << "*";
-    }
+    void formatImpl(const FormatSettings & settings, FormatState &, FormatStateStacked) const override;
 };
 
 }
